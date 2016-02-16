@@ -4,14 +4,13 @@
 <%@taglib uri="http://www.springframework.org/tags" prefix="spring" %>
 <html>
 <head>
-    <title> Welcome to bellinfo</title>
+    <title></title>
 </head>
-<body>
- <div>
-   <jsp:useBean id="student" class="com.springapp.mvc.model.Student" scope="request"/>
-   Bellinfo student login here <jsp:forward page="student-login.jsp">
-    <jsp:param name="student" value="student"/>
-    </jsp:forward>
- </div>
-</body>
+  <body>
+      ${message}
+      <c:if test="${enrollResponse !=null}">
+         <div>${enrollResponse.studentName}</div>
+         <div>${enrollResponse.studentUniqueId}</div>
+      </c:if>
+  </body>
 </html>

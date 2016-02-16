@@ -9,7 +9,7 @@
 <body>
   <div>
      student page
-    <form:form action="/student" method="post" modelAttribute="student">
+    <form:form action="/student/login" method="post" modelAttribute="student">
        Student Name: <form:input path="name"/>
        <div>
          <form:errors path="name" cssStyle="color: red"/>
